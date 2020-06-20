@@ -22,6 +22,7 @@ int main(){
                 // cout << "NO1"; 겹친다!
                 s.push(')');
                 // 탑물질을 현상해서 비교하는 발상, 디지털 물질을 만진다는 느낌이랄까
+                // !s.empty()요건 삭제해도 무방
             } else if ( s.top()==')' && !s.empty()){
                 s.push(')');
             } else if( s.top() =='(' && !s.empty()){
