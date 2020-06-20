@@ -21,6 +21,7 @@ int main(){
             if (s.empty()){
                 // cout << "NO1"; 겹친다!
                 s.push(')');
+                // 탑물질을 현상해서 비교하는 발상, 디지털 물질을 만진다는 느낌이랄까
             } else if ( s.top()==')' && !s.empty()){
                 s.push(')');
             } else if( s.top() =='(' && !s.empty()){
@@ -29,6 +30,7 @@ int main(){
         }
 
     }
+    // 여기서 측정해도 스택은 똑같이 유지되고 있으니까 가능한 셈
     if (s.empty()){
             cout << "YES\n";
     } else if (!s.empty()){
