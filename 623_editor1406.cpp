@@ -41,8 +41,43 @@ int main() {
                // 그니까 왼쪽 토쁘에서 빼서 오른쪽 토쁘로 들어가는 거군!
             }
         }
-    }
-    // 아이오스트림 안쓰고 시스트디오의 프린트에푸 쓰겠다
+        else if ( what == 'D') {
+            if(!right.empty()){
+                // 오려두기 같은 컨셉이라서 바로 뽑쁘하면 안되는 군!
+                left.push(right.top());
+                right.pop();
+            }
+        }
+        else if (what == 'B'){
+            if(!left.empty()){
+                left.pop();
+            }
+
+        }
+        else if (what == 'P'){
+            char c;
+            scanf( " %c", &c);
+            left.push(c);
+        }
+    } // 이렇게 명령어 로직은 끝이났똬
     // printf("%s", a);
     // cout << a;
+
+    // 명렁로직이 끝났고, 이제 남은 건 결과를 추력하는 것 뿐이다.
+    // 그럴라면 일단 정렬을 해야겠다. 스택을 하나로 단일화
+    while (!left.empty()) {
+        // 오른쪽으로 다 몰아넣은담에 뽑쁘로 뽑으면 순서대로 나오네
+        // 1 2 3 |4 5 6 ==> | 123456
+        // 뽑쁘; 1 뽑쁘 2; 뽑쁘 3; ... 123456
+        // 이렇게 안하고 왼쪽에 다 짱박은채로 뽑으면 654321.. 논노!
+        right.push(left.top());
+        left.pop(); 
+    }
+    // 결과 찍 기!
+    while (!right.empty()) {
+        printf("%c", right.top()); //여기서 씨는 문자열 약어
+        right.pop();
+    }
+    printf("\n");
+    return 0;
 }
