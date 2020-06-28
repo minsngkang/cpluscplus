@@ -1,3 +1,4 @@
+// TL. DR; return statement => is lke a calling. calling to a previous call site.
 #include<iostream>
 using namespace std;
 
@@ -24,3 +25,20 @@ int main(){
     // 빡토리얼 실행 안하고 그냥 멤오 5찍으면 0나오징 ㅋ, 기록행위를 해야해서 
     cout << memo[8]; // 그중에서 8번까지 결과나온거 찍으세여 ! 같은거군 
 }
+
+
+/* The computer, on the other hand, does not reason, and would continue following our instructions, 
+until stopped by something—when it either runs out of memory to make frames, or when the user kills the program.
+
+프레임!
+
+재귀에는
+베이스케이스가 있다.
+
+리턴문은 calling이다.
+베이스케이스 나올때까지 반복시키는게 재귀다
+
+콜싸이트를 표시하고 거기로 돌아간다
+
+If then같은거다.
+*/
